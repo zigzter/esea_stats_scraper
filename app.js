@@ -17,7 +17,7 @@ const columns = [
     'Dominations',
     'Revenges',
     'Ubercharges',
-    'Ubers dropped',
+    'Ubers Dropped',
 ];
 
 const teams = {
@@ -45,7 +45,7 @@ const scrape = async (url) => {
             root.querySelectorAll('#body-match-total2 tr').forEach((el, pi) =>
                 el.querySelectorAll('td.stat').forEach((el, si) => (teams.team2[pi].stats[columns[si]] = el.innerHTML))
             );
-            console.log(teams.team2[5]);
+            console.log(teams.team1);
         }
     });
 };
